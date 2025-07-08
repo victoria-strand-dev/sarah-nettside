@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artistic Arctic</title>
+    <link rel="stylesheet" href="sarah.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="/path-to-your-favicon.ico" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>Meny</h2>
+    <ul>
+      <li><a href="galleri.html">Galleri</a></li>
+      <li><a href="#">Lenke 2</a></li>
+      <li><a href="#">Lenke 3</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+  
+    <header>
+      <div class="section-content logo-title">
+        <img src="autograf2.png" alt="Logo" class="logo">
+        <h1 class="titleText">Artistic Arctic</h1>
+      </div>
+    </header>
+
+    <i class="fa-solid fa-circle-down scroll-indicator" id="scrollIndicator"></i>
+
+    <main>
+      <section class="top-section">
+        <div class="section-content">
+          <h2 class="introTitle">Når natur møter lerret</h2>
+          <h1 class="introTitle">Bak hvert strøk ligger kjærligheten til det arktiske landskapet. Velkommen inn i min verden av lys, is og stillhet.</h1>
+          <button class="nice-button">Se bilder</button>
+        </div>
+      </section>
+
+      <section class="aboutSection">
+        <div class="section-content">
+          <h2>Om meg</h2>
+          <div class="bio">
+            <img src="sarahWindy.jpg" alt="Sarah on a windy day" class="bio-img">
+            <p>Jeg heter Sara Andrea Strand, er 23 år gammel og har tegnet og malt så lenge jeg kan huske. Gjennom barneårene utviklet jeg min store lidenskap for form og farge, og i dag uttrykker jeg meg som kunstner med inspirasjon fra Svalbards storslåtte natur. Bildene mine fanger stemninger fra det arktiske landskapet – med spesielt fokus på det unike lyset og isbjørnen som symbol på både styrke og sårbarhet. Til daglig jobber jeg som butikksjef i Bik Bok i Moss, men kunsten er mitt fristed og min lidenskap. Gjennom maleriene mine ønsker jeg å formidle ro, kraft og respekt for naturen.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <div class="section-content contact-section">
+          <div class="social-links">
+            <h2>Finn meg på sosiale medier</h2>
+            <p>Følg meg gjerne på sosiale medier for mer inspirasjon og oppdateringer! Du finner meg på Facebook, TikTok og Instagram.</p>
+            <div class="social-icons">
+              <a href="https://www.wikipedia.org/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/sarahstrand_kunst?utm_source=ig_web_button_share_sheet&igsh=cWQyb2xxaHMyeXgy" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <form action="send_melding.php" method="POST">
+            <h2>...eller send meg en e-post</h2>
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Din e-post:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Melding:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-content">
+        <img src="skjaretDesignLogo.png" class="skjaretDesignLogo">
+        <p class="copyrightText">The material on this site, including images, may not be reproduced, distributed, transmitted, cached or otherwise used, except with written permission of Skj&aelig;ret Design. &copy; 2025 Skj&aelig;ret Design</p>
+      </div>
+    </footer>
+
+  </div> <!-- slutt på main-content -->
+
+  <script>
+    const scrollIndicator = document.getElementById('scrollIndicator');
+
+    scrollIndicator.addEventListener('click', () => {
+      window.scrollBy({
+        top: window.innerHeight / 2,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+
+      if (scrollPosition >= pageHeight - 5) {
+        scrollIndicator.classList.add('hidden');
+      } else {
+        scrollIndicator.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+
+
+</html>

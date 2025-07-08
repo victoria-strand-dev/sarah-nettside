@@ -1,0 +1,382 @@
+        /* border: 1px dotted yellow; padding: 10px; /* BORDERLINE BORDERLINE */
+        :root {
+            --color-bg-primary: #D9EDFA;
+            --color-bg-secondary: #5E6E28;
+            --color-text-primary: #202007;
+            --color-text-secondary: #3D3000;
+            --color-accent: #4F5F73;/*#73A4D4;#83915A;*/
+            --color-header: #535F23;
+            --color-darkergreen: #4C5720;
+            --color-nestensvart: #0A0D03;
+            --color-lyseregronn: #B8CC7E;
+            --color-kaldblaa: #4F5F73;
+            --color-darkblue: #3B4756;
+            --color-darkbeige: #948673;
+            --color-lysbeige: #E0DCD1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            background-color: var(--color-darkbeige);
+        }
+
+        h1,
+        h2,
+        p {
+            text-align: left;
+            color: var(--color-text-primary);
+            margin: 0;
+        }
+
+        .titleText {
+            color: var(--color-bg-primary);
+            font-family: 'Gloria Hallelujah';
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--color-darkblue);
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin: 0 0 2rem 0;
+            /* left-right-bottom-top */
+            font-size: 1.2rem;
+        }
+
+        header {
+            background-image: linear-gradient(100deg, rgba(24, 16, 13, 1) 0%, rgba(10, 7, 6, 0.1) 100%),
+            url('508116575_1060044978955263_4697871599654675349_n.JPG');
+            background-color: var(--color-kaldblaa);
+        }
+
+
+.logo-title {
+  display: flex;
+  align-items: center; /* vertically center image and text */
+  gap: 0.8rem; /* space between logo and title */
+}
+
+.logo {
+  width: 100%; /* adjust size as needed */
+  height: auto;
+}
+
+
+
+        .introTitle {
+            max-width: 60%;
+        }
+
+
+
+        /* -------------------- BUTTON ----------------------*/
+        .nice-button {
+            background-color: var(--color-accent);
+            color: var(--color-bg-primary);
+            font-family: Roboto, sans-serif;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .nice-button:hover {
+            background-color: var(--color-darkbeige);
+            /* slightly darker on hover */
+            transform: translateY(-2px);
+        }
+
+        .nice-button:active {
+            transform: translateY(0);
+        }
+
+
+        /* -------------------- SCROLL ----------------------*/
+        .scroll-indicator {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            animation: bounce 1.5s infinite;
+            cursor: pointer;
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        .scroll-indicator.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+        /* -------------------- INTRO ----------------------*/
+        .top-section {
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+.section-content {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+
+
+        /* -------------------- OM MEG ----------------------*/
+
+        .aboutSection {
+            background-color: var(--color-bg-primary);
+                max-width: 940px;
+                margin: 0 auto;
+                padding: 1rem 2rem;
+        }
+
+        .bio {
+            color: var(--color-text-primary);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Image styles */
+        .bio-img {
+            float: left;
+            width: 200px;
+            /* Adjust as needed */
+            height: auto;
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            /* Slightly rounded corners for a nice look */
+        }
+
+        /* -------------------- KONTAKT ----------------------*/
+
+.contact-section {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center; /* Optional: centers content horizontally */
+    margin-top: 2rem;
+}
+
+.social-links {
+    flex: 1 1 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start;     /* Align content to the left (optional, for consistency) */
+}
+
+
+.social-links h2 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.social-links p {
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: var(--color-text-primary);
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--color-accent);
+    transform: scale(1.2);
+}
+
+
+        .contact-form {
+            flex:1 1 52%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-top: 0.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--color-text-secondary);
+            border-radius: 4px;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+        }
+
+        .contact-form button {
+            background-color: var(--color-accent)
+                ;
+            color: var(--color-bg-primary);
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #4bb8cf;
+            
+        }
+
+        /* -------------------- COPYRIGHT ----------------------*/
+
+footer {
+    background:  linear-gradient(100deg, rgba(24, 16, 13, 1) 0%, rgba(10, 7, 6, 0.1) 100%);
+}
+
+        .copyrightText {
+           max-width: 80%;
+            color: var(--color-bg-primary);
+            text-align: justify;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            margin: 0 auto;
+        }
+
+
+.skjaretDesignLogo {
+      display: block;
+  
+
+  margin: 0 auto;
+    max-width: 235px;
+  width: 100%; /* scales down with container */
+  height: auto;
+}
+
+
+
+
+        /* ------------------------------------- MOBILE VIEW ------------------------------------- */
+        @media (max-width: 600px) {
+            html {
+                font-size: 0.9rem;
+            }
+
+            .introTitle {
+                max-width: 80%;
+            }
+
+          .contact-form {
+        flex: 1 1 100%;
+    }
+
+            .social-links p {
+                line-height: 1rem;
+            }
+                .social-icons {
+        justify-content: center;
+        gap: 2rem;
+    }
+        }
+
+
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: var(--color-kaldblaa);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.sidebar h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: var(--color-bg-primary);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: var(--color-lysbeige);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  color: var(--color-kaldblaa); 
+}
+
+
+/* MAIN CONTENT PADDING */
+.main-content {
+  margin-left: 220px; /* for å gi plass til sidebar */
+  padding: 0;         /* fjernet padding */
+  background-color: transparent; /* viktig for sømløst utseende */
+}
+
