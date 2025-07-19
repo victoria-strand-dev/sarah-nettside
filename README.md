@@ -10,3 +10,4 @@ En mulighet er å gjøre dette til en "kjøp"-side, som på en nettbutikk, ELLER
 ettersom det ikke nødvendigvis er alle bilder som er til salgs, 
 og ettersom hun gjerne vil vise frem sine arbeider uavhengig om bildene er solgt eller ikke.
 Sarah ønsker farger inspirert av naturen og av hennes malerstil: Grønn, blå og brun.
+ha forklarende teksterhustoruer under bildene i galleriet
